@@ -4099,6 +4099,9 @@ const run = async () => {
 
 		// attempt to run firebase deploy with debug mode
 		try {
+			await _actions_exec__WEBPACK_IMPORTED_MODULE_1__.exec(
+  				`gcloud auth activate-service-account --key-file=${process.env.GOOGLE_APPLICATION_CREDENTIALS}`
+			);
 			await _actions_exec__WEBPACK_IMPORTED_MODULE_1__.exec(`${cmd} --debug`);
 		} catch (error) {
 			_actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(`An error occured while deploying to Firebase: ${error}`);
