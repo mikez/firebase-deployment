@@ -4082,7 +4082,7 @@ const run = async () => {
 	const config = process.env.config;
 
 	// check only deployment settings
-	let deployOnly = process.env.function === 'true' ? 'function' : '';
+	let deployOnly = process.env.function === 'true' ? 'functions' : '';
 	deployOnly += deployOnly === '' ? '' : ' ';
 	deployOnly += process.env.hosting === 'true' ? `hosting` : '';
 
